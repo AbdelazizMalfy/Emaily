@@ -1,8 +1,10 @@
 const express = require('express');
+const mongoose = require('mongoose');
+const keys = require('./config/keys')
 require('./services/passport');
 // const bodyParser = require('body-parser');
 
-
+mongoose.connect(keys.mongoURI)
 
 const app = express();
 
